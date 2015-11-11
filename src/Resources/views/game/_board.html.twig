@@ -1,0 +1,37 @@
+{% set SHOT_BIT = constant('Worldstores\\Battleships\\Model\\Board::MATRIX_SHOT_BIT') %}
+{% set SHIP_BIT = constant('Worldstores\\Battleships\\Model\\Board::MATRIX_SHIP_BIT') %}
+
+<style type="text/css">
+    .cell:after {
+        content: '.';
+    }
+    .cell.shot:after {
+        content: '-';
+    }
+    .cell.shot.ship:after {
+        content: 'X';
+    }
+    .show .cell.ship:after {
+        content: 'X';
+    }
+</style>
+
+<p>{{ message }}</p>
+
+<table class="{{ show ? 'show' : '' }}">
+    <tr>
+        {% for i in 0..board[0]|length %}
+            <th>{{ i > 0 ? i : '' }}</th>
+        {% endfor %}
+    </tr>
+
+    {% for row in board %}
+    <tr>
+        <th>{{ loop.index|alphabet }}</th>
+
+        {% for cell in row %}
+            <td class="cell{{ cell b-and SHOT_BIT ? ' shot' : '' }}{{ cell b-and SHIP_BIT ? ' ship' : '' }}"></td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>

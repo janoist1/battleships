@@ -1,0 +1,29 @@
+{
+    "name": "Worldstores/Battleships",
+    "description": "Cruise and fire!",
+    "license": "MIT",
+    "keywords": [
+        "battleships",
+        "game"
+    ],
+    "authors": [
+        {
+            "name": "Istvan Jano",
+            "email": "janoist1@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "^1.3",
+        "twig/twig": "^1.2.0",
+        "symfony/twig-bridge": "^2.7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.0.*",
+        "symfony/var-dumper": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Worldstores\\Battleships\\": "src"
+        }
+    }
+}
