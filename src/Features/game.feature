@@ -4,8 +4,8 @@ Feature: Play the game
 
   Background:
     Given there is a 10 x 10 sized board
-    And there is a 3 length vertical ship with its first coordinate A5
-    And there is a 4 length horizontal ship with its first coordinate F4
+    And there is a 3 length vertical oriented ship with its first coordinate A5
+    And there is a 4 length horizontal oriented ship with its first coordinate F4
     And I am on homepage
     Then I should see "Enter coordinates"
 

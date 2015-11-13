@@ -63,14 +63,14 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     /**
      * Add a ship onto the board with a given position
      *
-     * @Given there is a :size length :orientation ship with its first coordinate :coordinate
+     * @Given there is a :size length :orientation oriented ship with its first coordinate :coordinate
      *
      * @param $size
      * @param $orientation
      * @param $coordinate
      * @throws \Exception
      */
-    public function thereIsALengthShipWithItsFirstCoordinate($size, $orientation, $coordinate)
+    public function thereIsALengthOrientedShipWithItsFirstCoordinate($size, $orientation, $coordinate)
     {
         $pointA = $this->coordinateToPoint($coordinate);
 
