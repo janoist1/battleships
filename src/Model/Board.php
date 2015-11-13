@@ -207,6 +207,21 @@ class Board
     }
 
     /**
+     * Return the total size/length of ships on the board
+     *
+     * @return int
+     */
+    public function getTotalSizeOfShips()
+    {
+        $size = 0;
+        foreach ($this->ships as $ship) {
+            $size += $ship->getSize();
+        }
+
+        return $size;
+    }
+
+    /**
      * @return Shot[]
      */
     public function getShots()

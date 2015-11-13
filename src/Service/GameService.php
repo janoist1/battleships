@@ -117,7 +117,7 @@ class GameService
     public function isGameOver()
     {
         // number of hits required to win
-        $hitsToWin = array_sum($this->settings['ships']);
+        $hitsToWin = $this->board->getTotalSizeOfShips();
 
         // lets not waste CPU time when there is not enough shot
         if (count($this->board->getShots()) < $hitsToWin) {
