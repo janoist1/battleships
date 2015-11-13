@@ -1,0 +1,13 @@
+default:
+#    autoload:
+#        '': %paths.base%/../src/Features/Context
+#    extensions:
+#        Behat\MinkExtension:
+#            base_url: http://vm.dev/worldstores/public/app_dev.php/
+#            selenium2: ~
+
+    suites:
+        default:
+            paths:    [ %paths.base%/../src/Features ]
+#            contexts: [ FeatureContext ]
+            contexts: [ Worldstores\Battleships\Features\Context\FeatureContext ]
