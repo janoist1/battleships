@@ -50,6 +50,10 @@ Feature: Play the game
       | F7         |
     Then I should see "Well done! You completed the game in 8 shots"
 
+  Scenario: Submit blank
+    When I press "submit"
+    Then I should see "enter a coordinate"
+
   Scenario: Enter show
     When I fill in "coordinate" with "show"
     And I press "submit"
@@ -59,3 +63,8 @@ Feature: Play the game
     When I fill in "coordinate" with "reset"
     And I press "submit"
     Then I should see "game restarted"
+
+  Scenario: Enter something invalid
+    When I fill in "coordinate" with "invalid"
+    And I press "submit"
+    Then I should see "error"
