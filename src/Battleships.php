@@ -57,6 +57,6 @@ class Battleships extends Application
      */
     private function load($config)
     {
-        return require __DIR__ . "/Resources/config/" . $config . ".php";
+        return require __DIR__ . "/../config/" . $config . ".php";
     }
 }

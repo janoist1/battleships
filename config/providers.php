@@ -9,7 +9,7 @@ return [
 
     // inject Twig
     [new Silex\Provider\TwigServiceProvider(), [
-        'twig.path' => __DIR__ . '/../views',
+        'twig.path' => __DIR__ . '/../templates',
     ]],
 
     // inject GameService
