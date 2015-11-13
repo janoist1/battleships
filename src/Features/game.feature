@@ -50,12 +50,12 @@ Feature: Play the game
       | F7         |
     Then I should see "Well done! You completed the game in 8 shots"
 
-  Scenario: Entering show
+  Scenario: Enter show
     When I fill in "coordinate" with "show"
     And I press "submit"
     Then I should see "showing ships"
 
-  Scenario: Entering reset
+  Scenario: Enter reset
     When I fill in "coordinate" with "reset"
     And I press "submit"
     Then I should see "game restarted"
