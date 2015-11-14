@@ -50,6 +50,13 @@ Feature: Play the game
       | F7         |
     Then I should see "Well done! You completed the game in 8 shots"
 
+  Scenario: Already shot here
+    Given the following shots
+      | coordinate |
+      | A1         |
+    When I shoot to A1
+    Then I should see "Already shot here"
+
   Scenario: Submit blank
     When I press "submit"
     Then I should see "enter a coordinate"
